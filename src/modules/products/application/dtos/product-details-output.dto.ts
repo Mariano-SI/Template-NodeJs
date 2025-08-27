@@ -12,6 +12,7 @@ export class ProductDetailsOutputDto {
   inactivatedAt?: string | null
   variants?: any[]
   images?: any[]
+  categories?: any[]
   supplier?: any
 
   constructor(props: any) {
@@ -28,6 +29,7 @@ export class ProductDetailsOutputDto {
     this.inactivatedAt = props.inactivatedAt
     this.variants = props.variants
     this.images = props.images
+    this.categories = props.categories
     this.supplier = props.supplier
   }
 }
