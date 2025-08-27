@@ -4,7 +4,7 @@ import { ProductVariantsInMemoryRepository } from '../mocks/product-variants.rep
 import { ProductImagesInMemoryRepository } from '../mocks/product-images.repository.in-memory'
 import { ProductCategorizationInMemoryRepository } from '../mocks/product-categorization.repository.in-memory'
 import { ProductCategoryInMemoryRepository } from '../mocks/product-category.repository.in-memory'
-import { SuppliersInMemoryRepository } from '@/modules/suppliers/infraestructure/tests/mocks/supplier.repository.in-memory'
+import { SuppliersInMemoryRepository } from '@/modules/suppliers/tests/mocks/supplier.repository.in-memory'
 import { SupplierModel } from '@/modules/suppliers/domain/models/supplier.model'
 import { ProductCategoryModel } from '@/modules/products/domain/models/product.category.model'
 import { BadRequestError } from '@/common/domain/errors/bad-request-error'
