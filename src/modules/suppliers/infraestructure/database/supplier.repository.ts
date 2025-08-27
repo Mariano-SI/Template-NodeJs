@@ -4,7 +4,7 @@ import { SuppliersRepository } from '../../domain/repositories/supplier.reposito
 
 export class SupplierRepositoryJson implements SuppliersRepository {
   private static instance: SupplierRepositoryJson
-  private filePath = 'src/common/infrastructure/database/suppliers.json'
+  private filePath = `${process.env.DB_FOLDER_PATH || 'src/common/infrastructure/database'}/suppliers.json`
 
   static getInstance(): SupplierRepositoryJson {
     if (!SupplierRepositoryJson.instance) {

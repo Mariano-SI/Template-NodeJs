@@ -4,7 +4,7 @@ import { ProductsRepository } from '../../domain/repositories/products.repositor
 
 export class ProductRepositoryJson implements ProductsRepository {
   private static instance: ProductRepositoryJson
-  private filePath = 'src/common/infrastructure/database/products.json'
+  private filePath = `${process.env.DB_FOLDER_PATH || 'src/common/infrastructure/database'}/products.json`
 
   static getInstance(): ProductRepositoryJson {
     if (!ProductRepositoryJson.instance) {

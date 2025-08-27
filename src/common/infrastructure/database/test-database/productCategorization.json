@@ -1,0 +1,12 @@
+[
+  {
+    "id": "catz-1",
+    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04", 
+    "product_id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5"
+  },
+  {
+    "id": "catz-2",
+    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05", 
+    "product_id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5"
+  }
+]

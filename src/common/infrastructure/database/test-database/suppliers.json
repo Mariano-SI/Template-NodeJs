@@ -1,0 +1,77 @@
+[
+  {
+    "id": "abf792bc-aad9-469c-a392-026252785b9c",
+    "name": "INTEGRATION TEST DEFAULT SUPPLIER",
+    "description": "Supplier utilizado como padrão nos testes de integração.",
+    "active": true,
+    "created_at": "2024-01-01T09:00:00Z",
+    "created_by": "admin",
+    "updated_at": "2024-06-01T12:00:00Z",
+    "updated_by": "admin",
+    "inactivated_at": null
+  },
+  {
+    "id": "455e251e-e65f-478b-8f0b-3a14a8ade9ca",
+    "name": "Supplier Test 1756311335482",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T16:15:35.494Z",
+    "created_by": "system"
+  },
+  {
+    "id": "f3fbd995-8581-4fd8-a9b4-6db671b25818",
+    "name": "Supplier Test 1756311335504",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T16:15:35.504Z",
+    "created_by": "system"
+  },
+  {
+    "id": "0321e0c6-cb58-4d87-b745-0eddcfdd25dd",
+    "name": "Supplier Test 1756311402575",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T16:16:42.584Z",
+    "created_by": "system"
+  },
+  {
+    "id": "0c6e270f-e019-4962-bff8-ec0fbd5e7a0d",
+    "name": "Supplier Test 1756311402588",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T16:16:42.595Z",
+    "created_by": "system"
+  },
+  {
+    "id": "3b8b6738-687e-407e-a320-6489354ed5a9",
+    "name": "Supplier Test 1756314044218",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T17:00:44.221Z",
+    "created_by": "system"
+  },
+  {
+    "id": "53ff9d09-aa42-455b-a4f2-a359f71fa892",
+    "name": "Supplier Test 1756314044223",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T17:00:44.232Z",
+    "created_by": "system"
+  },
+  {
+    "id": "8f21289a-b355-4bf6-bd16-86152d5f1a75",
+    "name": "Supplier Test 1756314076053",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T17:01:16.056Z",
+    "created_by": "system"
+  },
+  {
+    "id": "28d3ae19-74a1-45a2-a6d7-1eb0175639dc",
+    "name": "Supplier Test 1756314076061",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T17:01:16.070Z",
+    "created_by": "system"
+  }
+]

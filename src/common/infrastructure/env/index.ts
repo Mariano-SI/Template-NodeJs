@@ -16,6 +16,7 @@ const envSchema = z.object({
   REDIS_HOST: z.string(),
   REDIS_PORT: z.coerce.number(),
   REDIS_PASSWORD: z.string().optional(),
+  DB_FOLDER_PATH: z.string().default('src/common/infrastructure/database'),
 })
 
 const _env = envSchema.safeParse(process.env)

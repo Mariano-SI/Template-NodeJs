@@ -3,13 +3,12 @@ export class ProductDetailsOutputDto {
   name: string
   description: string
   active: boolean
-  productTypeId: string
-  supplierId: string
-  createdAt: string
-  createdBy: string
-  updatedAt?: string
-  updatedBy?: string
-  inactivatedAt?: string | null
+  supplier_id: string
+  created_at: string
+  created_by: string
+  updated_at?: string
+  updated_by?: string
+  inactivated_at?: string | null
   variants?: any[]
   images?: any[]
   categories?: any[]
@@ -20,13 +19,12 @@ export class ProductDetailsOutputDto {
     this.name = props.name
     this.description = props.description
     this.active = props.active
-    this.productTypeId = props.productTypeId
-    this.supplierId = props.supplierId
-    this.createdAt = props.createdAt
-    this.createdBy = props.createdBy
-    this.updatedAt = props.updatedAt
-    this.updatedBy = props.updatedBy
-    this.inactivatedAt = props.inactivatedAt
+    this.supplier_id = props.supplier_id
+    this.created_at = props.created_at
+    this.created_by = props.created_by
+    this.updated_at = props.updated_at
+    this.updated_by = props.updated_by
+    this.inactivated_at = props.inactivated_at
     this.variants = props.variants
     this.images = props.images
     this.categories = props.categories

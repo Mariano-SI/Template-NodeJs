@@ -6,7 +6,7 @@ export class ProductVariantsRepositoryJson
   implements ProductVariantsRepository
 {
   private static instance: ProductVariantsRepositoryJson
-  private filePath = 'src/common/infrastructure/database/productVariants.json'
+  private filePath = `${process.env.DB_FOLDER_PATH || 'src/common/infrastructure/database'}/productVariants.json`
 
   static getInstance(): ProductVariantsRepositoryJson {
     if (!ProductVariantsRepositoryJson.instance) {

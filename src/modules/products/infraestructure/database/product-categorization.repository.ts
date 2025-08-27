@@ -6,8 +6,8 @@ export class ProductCategorizationRepositoryJson
   implements ProductCategorizationRepository
 {
   private static instance: ProductCategorizationRepositoryJson
-  private filePath =
-    'src/common/infrastructure/database/productCategorization.json'
+
+  private filePath = `${process.env.DB_FOLDER_PATH || 'src/common/infrastructure/database'}/productCategorization.json`
 
   static getInstance(): ProductCategorizationRepositoryJson {
     if (!ProductCategorizationRepositoryJson.instance) {

@@ -1,0 +1,25 @@
+[
+  {
+  "id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5",
+  "name": "INTEGRATION TEST DEFAULT PRODUCT",
+  "description": "Smartphone com tela AMOLED, 128GB, câmera tripla.",
+  "active": true,
+  "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
+  "created_at": "2024-01-10T10:00:00Z",
+  "created_by": "admin",
+  "updated_at": "2024-06-01T12:00:00Z",
+  "updated_by": "admin",
+  "inactivated_at": null
+  },
+  {
+    "id": "1224900d-3d82-456f-9870-f90b40d47519",
+    "name": "INTEGRATION TEST PRODUCT WITHOUT SUPPLIER",
+    "description": "Produto de integração para teste de ausência de supplier.",
+    "active": true,
+    "created_at": "2024-01-01T09:00:00Z",
+    "created_by": "admin",
+    "updated_at": "2024-06-01T12:00:00Z",
+    "updated_by": "admin",
+    "inactivated_at": null
+  }
+]
