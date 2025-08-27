@@ -18,4 +18,12 @@ export class ProductImagesRepositoryJson implements ProductImagesRepository {
     const images: ProductImageModel[] = JSON.parse(data)
     return images.filter(img => img.productId === productId)
   }
+
+  async create(image: ProductImageModel): Promise<ProductImageModel> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const images: ProductImageModel[] = JSON.parse(data)
+    images.push(image)
+    await fs.writeFile(this.filePath, JSON.stringify(images, null, 2))
+    return image
+  }
 }

@@ -34,5 +34,26 @@
     "updated_at": "2024-08-05T16:30:00Z",
     "updated_by": "admin",
     "inactivated_at": null
+  },
+  {
+    "id": "c9c35c3d-89f7-4230-874a-77094cb6d316",
+    "name": "Teste Mercado livre",
+    "description": "Testando produto oficial do mercado livre",
+    "active": true,
+    "supplier_id": "5d44b7b7-375d-4e0b-ae00-53d4355d6e79",
+    "created_at": "2025-08-27T04:20:07.989Z",
+    "created_by": "system"
+  },
+  {
+    "id": "2639e91d-408a-4492-9368-522e77f47982",
+    "name": "Teste Mercado livre 2",
+    "description": "Testando produto oficial do mercado livre",
+    "active": true,
+    "supplier_id": "5d44b7b7-375d-4e0b-ae00-53d4355d6e79",
+    "created_at": "2025-08-27T04:25:44.121Z",
+    "created_by": "system",
+    "updated_at": null,
+    "updated_by": null,
+    "inactivated_at": null
   }
 ]

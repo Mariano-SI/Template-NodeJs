@@ -26,4 +26,19 @@ export class ProductRepositoryJson implements ProductsRepository {
     })
     return product ? product : null
   }
+
+  async findByName(name: string): Promise<ProductModel | null> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const products: ProductModel[] = JSON.parse(data)
+    const product = products.find(p => p.name === name)
+    return product ? product : null
+  }
+
+  async create(product: ProductModel): Promise<ProductModel> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const products: ProductModel[] = JSON.parse(data)
+    products.push(product)
+    await fs.writeFile(this.filePath, JSON.stringify(products, null, 2))
+    return product
+  }
 }

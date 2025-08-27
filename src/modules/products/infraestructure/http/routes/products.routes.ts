@@ -1,5 +1,7 @@
 import { Router } from 'express'
 import { showProductDetailsController } from '../controllers/show-product-details.controller'
+import upload from '@/common/infrastructure/upload/multer'
+import { createProductController } from '../controllers/create-product.controller'
 
 const productsRoutes = Router()
 
@@ -99,5 +101,6 @@ const productsRoutes = Router()
  *         description: Produto não encontrado ou fornecedor não encontrado
  */
 productsRoutes.get('/:id', showProductDetailsController)
+productsRoutes.post('/', upload.array('photo', 10), createProductController)
 
 export { productsRoutes }

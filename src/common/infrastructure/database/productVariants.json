@@ -70,5 +70,53 @@
     "inactivated_at": null,
     "c": "2024-08-05T16:30:00Z",
     "updated_by": "admin"
+  },
+  {
+    "id": "96a275e8-18f2-44ba-9622-eaf34e7c25dd",
+    "product_id": "c9c35c3d-89f7-4230-874a-77094cb6d316",
+    "active": true,
+    "price": 3999.99,
+    "quantity": 10,
+    "attributes": {
+      "color": "Black",
+      "storage": "128GB"
+    },
+    "created_at": "2025-08-27T04:20:08.683Z"
+  },
+  {
+    "id": "6ef53a66-178f-42ad-b18e-2780f363e33a",
+    "product_id": "c9c35c3d-89f7-4230-874a-77094cb6d316",
+    "active": true,
+    "price": 4199.99,
+    "quantity": 5,
+    "attributes": {
+      "color": "Silver",
+      "storage": "256GB"
+    },
+    "created_at": "2025-08-27T04:20:08.684Z"
+  },
+  {
+    "id": "69a5327c-1c61-49d0-be11-ab656b2ba9ba",
+    "product_id": "2639e91d-408a-4492-9368-522e77f47982",
+    "active": true,
+    "price": 3999.99,
+    "quantity": 10,
+    "attributes": {
+      "color": "Black",
+      "storage": "128GB"
+    },
+    "created_at": "2025-08-27T04:25:45.408Z"
+  },
+  {
+    "id": "d5939d88-74cd-4a2e-9c89-bde58427b7bd",
+    "product_id": "2639e91d-408a-4492-9368-522e77f47982",
+    "active": true,
+    "price": 4199.99,
+    "quantity": 5,
+    "attributes": {
+      "color": "Silver",
+      "storage": "256GB"
+    },
+    "created_at": "2025-08-27T04:25:45.409Z"
   }
 ]

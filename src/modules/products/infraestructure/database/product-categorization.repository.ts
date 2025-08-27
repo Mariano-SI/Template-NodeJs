@@ -24,4 +24,17 @@ export class ProductCategorizationRepositoryJson
     const productCategories: ProductCategorizationModel[] = JSON.parse(data)
     return productCategories.filter(pc => pc.product_id === productId)
   }
+
+  async create(
+    categorization: ProductCategorizationModel,
+  ): Promise<ProductCategorizationModel> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const productCategories: ProductCategorizationModel[] = JSON.parse(data)
+    productCategories.push(categorization)
+    await fs.writeFile(
+      this.filePath,
+      JSON.stringify(productCategories, null, 2),
+    )
+    return categorization
+  }
 }

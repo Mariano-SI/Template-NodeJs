@@ -28,4 +28,12 @@ export class ProductVariantsRepositoryJson
       return true
     })
   }
+
+  async create(variant: ProductVariantModel): Promise<ProductVariantModel> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const variants: ProductVariantModel[] = JSON.parse(data)
+    variants.push(variant)
+    await fs.writeFile(this.filePath, JSON.stringify(variants, null, 2))
+    return variant
+  }
 }

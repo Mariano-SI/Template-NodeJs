@@ -2,4 +2,7 @@ import { ProductCategorizationModel } from '../models/product.categorization.mod
 
 export interface ProductCategorizationRepository {
   findByProductId(productId: string): Promise<ProductCategorizationModel[]>
+  create(
+    categorization: ProductCategorizationModel,
+  ): Promise<ProductCategorizationModel>
 }
