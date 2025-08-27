@@ -6,5 +6,13 @@
     "description": "Produto excelente! A entrega pelo Mercado Livre foi super rápida e chegou antes do prazo. Tudo muito bem embalado e em perfeito estado. Ótima experiência de compra!",
     "created_at": "2025-08-27T21:54:52.020Z",
     "created_by": "system"
+  },
+  {
+    "id": "00d9df84-ff98-48d9-b03e-bf3106e7ae20",
+    "product_id": "760322bd-85fb-4ba6-95ae-8d549db59211",
+    "rating": 2,
+    "description": "Produto excelente! A entrega pelo Mercado Livre foi super rápida e chegou antes do prazo. Tudo muito bem embalado e em perfeito estado. Ótima experiência de compra!",
+    "created_at": "2025-08-27T23:08:26.921Z",
+    "created_by": "system"
   }
 ]

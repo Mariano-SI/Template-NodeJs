@@ -6,6 +6,8 @@ import { ProductImagesRepository } from '../../domain/repositories/product-image
 import { SuppliersRepository } from '@/modules/suppliers/domain/repositories/supplier.repository'
 import { ProductCategorizationRepository } from '../../domain/repositories/product-categorization.repository'
 import { ProductCategoryRepository } from '../../domain/repositories/product-category-repository'
+import { ProductReviewRepository } from '../../domain/repositories/product-review.repository'
+import { ProductReviewImageRepository } from '../../domain/repositories/product-review-image.repository'
 
 type Input = {
   id: string
@@ -21,6 +23,8 @@ export default class ShowProductDetailsUseCase {
     private readonly suppliersRepository: SuppliersRepository,
     private readonly productCategorizationRepository: ProductCategorizationRepository,
     private readonly categoryRepository: ProductCategoryRepository,
+    private readonly productReviewRepository: ProductReviewRepository,
+    private readonly productReviewImageRepository: ProductReviewImageRepository,
   ) {}
   async execute(input: Input): Promise<Output> {
     const { id, includeInactive } = input
@@ -36,6 +40,31 @@ export default class ShowProductDetailsUseCase {
       this.suppliersRepository.findById(product.supplier_id),
       this.productCategorizationRepository.findByProductId(product.id),
     ])
+
+    const productReviews = await this.productReviewRepository.findByProductId(
+      product.id,
+    )
+    const reviewsWithImages = []
+    for (const review of productReviews) {
+      const images =
+        await this.productReviewImageRepository.getImageUrlByReviewId(review.id)
+      reviewsWithImages.push({
+        id: review.id,
+        product_id: review.product_id,
+        rating: review.rating,
+        description: review.description,
+        created_at: review.created_at,
+        created_by: review.created_by,
+        images, // array de imagens
+      })
+    }
+
+    const average_rating =
+      productReviews.length > 0
+        ? await this.productReviewRepository.findAverageRatingByProductId(
+            product.id,
+          )
+        : 0
 
     if (!supplier) {
       throw new NotFoundError('Supplier not found')
@@ -53,6 +82,8 @@ export default class ShowProductDetailsUseCase {
       images,
       categories,
       supplier,
+      average_rating,
+      reviews: reviewsWithImages,
     })
   }
 }

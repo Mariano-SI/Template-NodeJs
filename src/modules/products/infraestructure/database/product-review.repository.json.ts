@@ -20,4 +20,18 @@ export class ProductReviewRepositoryJson implements ProductReviewRepository {
     await fs.writeFile(this.filePath, JSON.stringify(reviews, null, 2))
     return review
   }
+
+  async findByProductId(productId: string): Promise<ProductReviewModel[]> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const reviews: ProductReviewModel[] = JSON.parse(data)
+    return reviews.filter(review => review.product_id === productId)
+  }
+
+  async findAverageRatingByProductId(productId: string): Promise<number> {
+    const reviews = await this.findByProductId(productId)
+    if (reviews.length === 0) return 0
+    const total = reviews.reduce((sum, review) => sum + review.rating, 0)
+    const avg = total / reviews.length
+    return Math.round(avg * 2) / 2
+  }
 }

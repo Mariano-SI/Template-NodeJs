@@ -25,4 +25,12 @@ export class ProductReviewImageRepositoryJson
     await fs.writeFile(this.filePath, JSON.stringify(images, null, 2))
     return image
   }
+
+  async getImageUrlByReviewId(reviewId: string): Promise<string[]> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const images: ProductReviewImageModel[] = JSON.parse(data)
+    return images
+      .filter(image => image.product_review_id === reviewId)
+      .map(image => image.image)
+  }
 }

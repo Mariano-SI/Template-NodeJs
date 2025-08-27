@@ -3,6 +3,7 @@ export class ProductDetailsOutputDto {
   name: string
   description: string
   active: boolean
+  average_rating?: number
   supplier_id: string
   created_at: string
   created_by: string
@@ -13,6 +14,7 @@ export class ProductDetailsOutputDto {
   images?: any[]
   categories?: any[]
   supplier?: any
+  reviews?: any[]
 
   constructor(props: any) {
     this.id = props.id
@@ -29,5 +31,7 @@ export class ProductDetailsOutputDto {
     this.images = props.images
     this.categories = props.categories
     this.supplier = props.supplier
+    this.average_rating = props.average_rating ?? 0
+    this.reviews = props.reviews ?? []
   }
 }

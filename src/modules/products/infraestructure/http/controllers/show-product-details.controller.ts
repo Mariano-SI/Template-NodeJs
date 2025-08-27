@@ -7,6 +7,8 @@ import { ProductImagesRepositoryJson } from '../../database/product-images.repos
 import { SupplierRepositoryJson } from '@/modules/suppliers/infraestructure/database/supplier.repository'
 import { ProductCategorizationRepositoryJson } from '../../database/product-categorization.repository'
 import { ProductCategoryRepositoryJson } from '../../database/product-category.repository.json'
+import { ProductReviewRepositoryJson } from '../../database/product-review.repository.json'
+import { ProductReviewImageRepositoryJson } from '../../database/product-review-image.repository.json'
 
 export async function showProductDetailsController(
   request: Request,
@@ -21,6 +23,9 @@ export async function showProductDetailsController(
   const productCategorizationRepository =
     ProductCategorizationRepositoryJson.getInstance()
   const categoryRepository = ProductCategoryRepositoryJson.getInstance()
+  const productReviewRepository = ProductReviewRepositoryJson.getInstance()
+  const productReviewImageRepository =
+    ProductReviewImageRepositoryJson.getInstance()
 
   const showProductDetailsUseCase = new ShowProductDetailsUseCase(
     productRepository,
@@ -29,6 +34,8 @@ export async function showProductDetailsController(
     suppliersRepository,
     productCategorizationRepository,
     categoryRepository,
+    productReviewRepository,
+    productReviewImageRepository,
   )
 
   const example = await showProductDetailsUseCase.execute({

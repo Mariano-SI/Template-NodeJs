@@ -45,7 +45,7 @@ productsRoutes.get('/', listProductsController)
  *     summary: Retorna os detalhes de um produto 🚩
  *     description: |
  *       🚩 **ATENÇÃO:** Este é o endpoint PRINCIPAL da avaliação!
- *       Use este endpoint para consultar todos os detalhes de um produto, incluindo variantes, imagens, categorias e fornecedor.
+ *       Use este endpoint para consultar todos os detalhes de um produto, incluindo variantes, imagens, categorias, fornecedor, avaliações e nota média.
  *     tags: [Products]
  *     parameters:
  *       - in: path
@@ -74,6 +74,7 @@ productsRoutes.get('/', listProductsController)
  *                 name: { type: string }
  *                 description: { type: string }
  *                 active: { type: boolean }
+ *                 average_rating: { type: number, example: 3.5, description: "Nota média calculada a partir das avaliações" }
  *                 product_type_id: { type: string }
  *                 supplier_id: { type: string }
  *                 created_at: { type: string, format: date-time }
@@ -131,6 +132,23 @@ productsRoutes.get('/', listProductsController)
  *                     properties:
  *                       id: { type: string }
  *                       name: { type: string }
+ *                       active: { type: boolean }
+ *                 reviews:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       id: { type: string }
+ *                       product_id: { type: string }
+ *                       rating: { type: integer }
+ *                       description: { type: string }
+ *                       created_at: { type: string, format: date-time }
+ *                       created_by: { type: string }
+ *                       images:
+ *                         type: array
+ *                         items:
+ *                           type: string
+ *                           format: uri
  *       400:
  *         description: Parâmetros inválidos
  *       404:
