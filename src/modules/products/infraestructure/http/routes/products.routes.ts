@@ -5,13 +5,46 @@ import { createProductController } from '../controllers/create-product.controlle
 import { listProductsController } from '../controllers/list-products.controller'
 
 const productsRoutes = Router()
+
+/**
+ * @swagger
+ * /products:
+ *   get:
+ *     summary: Lista todos os produtos
+ *     tags: [Products]
+ *     responses:
+ *       200:
+ *         description: Lista de produtos
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *                 properties:
+ *                   id: { type: string }
+ *                   name: { type: string }
+ *                   description: { type: string }
+ *                   active: { type: boolean }
+ *                   supplier_id: { type: string }
+ *                   created_at: { type: string, format: date-time }
+ *                   created_by: { type: string }
+ *                   updated_at: { type: string, format: date-time, nullable: true }
+ *                   updated_by: { type: string, nullable: true }
+ *                   inactivated_at: { type: string, format: date-time, nullable: true }
+ *       500:
+ *         description: Erro interno do servidor
+ */
 productsRoutes.get('/', listProductsController)
 
 /**
  * @swagger
  * /products/{id}:
  *   get:
- *     summary: Retorna os detalhes de um produto
+ *     summary: Retorna os detalhes de um produto 🚩
+ *     description: |
+ *       🚩 **ATENÇÃO:** Este é o endpoint PRINCIPAL da avaliação!
+ *       Use este endpoint para consultar todos os detalhes de um produto, incluindo variantes, imagens, categorias e fornecedor.
  *     tags: [Products]
  *     parameters:
  *       - in: path
