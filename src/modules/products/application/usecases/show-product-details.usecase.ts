@@ -37,8 +37,6 @@ export default class ShowProductDetailsUseCase {
       this.productCategorizationRepository.findByProductId(product.id),
     ])
 
-    console.log('productCategories', productCategories)
-
     if (!supplier) {
       throw new NotFoundError('Supplier not found')
     }

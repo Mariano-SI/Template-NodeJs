@@ -12,6 +12,7 @@ import { ProductImageModel } from '../../domain/models/product.image.model'
 import { ProductVariantModel } from '../../domain/models/product.variant.model'
 import { ProductCategorizationModel } from '../../domain/models/product.categorization.model'
 import { CacheProvider } from '@/common/domain/providers/cache.provider'
+import { ConflictError } from '@/common/domain/errors/conflict-error'
 
 type Input = {
   name: string
@@ -42,7 +43,7 @@ export default class CreateProductUseCase {
     )
 
     if (productAlreadyExists) {
-      throw new BadRequestError('A product with this name already exists')
+      throw new ConflictError('A product with this name already exists')
     }
 
     const supplier: SupplierModel | null =
