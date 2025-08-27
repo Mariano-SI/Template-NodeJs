@@ -1,7 +1,7 @@
 import { BadRequestError } from '@/common/domain/errors/bad-request-error'
 import { Request, Response } from 'express'
 import { z } from 'zod'
-import { ExampleRepositoryPG } from '../../database/example.repository'
+import { ExampleRepositoryPG } from '../../database/supplier.repository'
 import CreateExampleUseCase from '@/modules/example/application/usecases/create-example.usecase'
 
 export async function createExampleController(

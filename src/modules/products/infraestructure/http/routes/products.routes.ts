@@ -74,10 +74,22 @@ const productsRoutes = Router()
  *                       inactivatedAt: { type: string, format: date-time, nullable: true }
  *                       updatedAt: { type: string, format: date-time }
  *                       updatedBy: { type: string }
+ *                 supplier:
+ *                   type: object
+ *                   properties:
+ *                     id: { type: string }
+ *                     name: { type: string }
+ *                     description: { type: string }
+ *                     active: { type: boolean }
+ *                     createdAt: { type: string, format: date-time }
+ *                     createdBy: { type: string }
+ *                     updatedAt: { type: string, format: date-time }
+ *                     updatedBy: { type: string }
+ *                     inactivatedAt: { type: string, format: date-time, nullable: true }
  *       400:
  *         description: Parâmetros inválidos
  *       404:
- *         description: Produto não encontrado
+ *         description: Produto não encontrado ou fornecedor não encontrado
  */
 productsRoutes.get('/:id', showProductDetailsController)
 

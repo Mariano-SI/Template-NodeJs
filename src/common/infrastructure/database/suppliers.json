@@ -1,0 +1,35 @@
+[
+  {
+    "id": "5d44b7b7-375d-4e0b-ae00-53d4355d6e79",
+    "name": "Samsung",
+    "description": "Fornecedor oficial de produtos Samsung.",
+    "active": true,
+    "createdAt": "2024-01-01T09:00:00Z",
+    "createdBy": "admin",
+    "updatedAt": "2024-06-01T12:00:00Z",
+    "updatedBy": "admin",
+    "inactivatedAt": null
+  },
+  {
+    "id": "37ae132c-dc73-4c2f-8eb3-ec7f77cc9949",
+    "name": "Dell",
+    "description": "Fornecedor oficial de notebooks Dell.",
+    "active": true,
+    "createdAt": "2024-01-01T09:00:00Z",
+    "createdBy": "admin",
+    "updatedAt": "2024-06-01T12:00:00Z",
+    "updatedBy": "admin",
+    "inactivatedAt": null
+  },
+  {
+    "id": "bacbe516-9158-4428-8e84-0ba6c7859fc4",
+    "name": "JBL",
+    "description": "Fornecedor oficial de fones de ouvido JBL.",
+    "active": true,
+    "createdAt": "2024-01-01T09:00:00Z",
+    "createdBy": "admin",
+    "updatedAt": "2024-06-01T12:00:00Z",
+    "updatedBy": "admin",
+    "inactivatedAt": null
+  }
+]

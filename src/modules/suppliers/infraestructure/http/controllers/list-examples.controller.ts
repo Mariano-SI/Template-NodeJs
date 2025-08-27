@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { ExampleRepositoryPG } from '../../database/example.repository'
+import { ExampleRepositoryPG } from '../../database/supplier.repository'
 import ListExamplesUseCase from '@/modules/example/application/usecases/list-examples.usecase'
 
 export async function listExamplesController(

@@ -12,7 +12,7 @@ export class ProductDetailsOutputDto {
   inactivatedAt?: string | null
   variants?: any[]
   images?: any[]
-  // supplier?: any
+  supplier?: any
 
   constructor(props: any) {
     this.id = props.id
@@ -28,6 +28,6 @@ export class ProductDetailsOutputDto {
     this.inactivatedAt = props.inactivatedAt
     this.variants = props.variants
     this.images = props.images
-    // this.supplier = props.supplier
+    this.supplier = props.supplier
   }
 }
