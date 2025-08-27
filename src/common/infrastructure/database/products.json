@@ -1,0 +1,41 @@
+[
+  {
+    "id": "760322bd-85fb-4ba6-95ae-8d549db59211",
+    "name": "Smartphone Samsung Galaxy S23",
+    "description": "Smartphone com tela AMOLED, 128GB, câmera tripla.",
+    "active": true,
+    "productTypeId": "type-smartphone",
+    "supplierId": "supplier-samsung",
+    "createdAt": "2024-01-10T10:00:00Z",
+    "createdBy": "admin",
+    "updatedAt": "2024-06-01T12:00:00Z",
+    "updatedBy": "admin",
+    "inactivatedAt": null
+  },
+  {
+    "id": "b2b3ed8f-7507-4490-9350-03ca1ae1418f",
+    "name": "Notebook Dell Inspiron 15",
+    "description": "Notebook Intel i7, 16GB RAM, SSD 512GB.",
+    "active": true,
+    "productTypeId": "type-notebook",
+    "supplierId": "supplier-dell",
+    "createdAt": "2024-02-15T09:30:00Z",
+    "createdBy": "admin",
+    "updatedAt": "2024-07-10T15:00:00Z",
+    "updatedBy": "admin",
+    "inactivatedAt": null
+  },
+  {
+    "id": "bd58dcd7-1929-412c-8bf7-467b75dfa330",
+    "name": "Fone de Ouvido JBL Tune 510BT",
+    "description": "Fone Bluetooth, bateria de 40h, microfone embutido.",
+    "active": true,
+    "productTypeId": "type-headphone",
+    "supplierId": "supplier-jbl",
+    "createdAt": "2024-03-20T11:45:00Z",
+    "createdBy": "admin",
+    "updatedAt": "2024-08-05T16:30:00Z",
+    "updatedBy": "admin",
+    "inactivatedAt": null
+  }
+]
