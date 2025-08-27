@@ -2,8 +2,10 @@ import { Router } from 'express'
 import { showProductDetailsController } from '../controllers/show-product-details.controller'
 import upload from '@/common/infrastructure/upload/multer'
 import { createProductController } from '../controllers/create-product.controller'
+import { listProductsController } from '../controllers/list-products.controller'
 
 const productsRoutes = Router()
+productsRoutes.get('/', listProductsController)
 
 /**
  * @swagger
@@ -101,6 +103,91 @@ const productsRoutes = Router()
  *         description: Produto não encontrado ou fornecedor não encontrado
  */
 productsRoutes.get('/:id', showProductDetailsController)
+/**
+ * @swagger
+ * /products:
+ *   post:
+ *     summary: Cria um novo produto
+ *     tags: [Products]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: Smartphone Samsung Galaxy S23
+ *               description:
+ *                 type: string
+ *                 example: Smartphone com tela AMOLED, 128GB, câmera tripla.
+ *               active:
+ *                 type: boolean
+ *                 example: true
+ *               product_type_id:
+ *                 type: string
+ *                 example: type-smartphone
+ *               supplier_id:
+ *                 type: string
+ *                 format: uuid
+ *                 example: 5d44b7b7-375d-4e0b-ae00-53d4355d6e79
+ *               variants:
+ *                 type: string
+ *                 description: "Array de variantes em formato JSON string. Exemplo: '[{\"price\":3999.99,\"quantity\":10,\"attributes\":\"{\\\"color\\\":\\\"Black\\\",\\\"storage\\\":\\\"128GB\\\"}\"}]'"
+ *                 example: '[{"price":3999.99,"quantity":10,"attributes":"{\"color\":\"Black\",\"storage\":\"128GB\"}"}]'
+ *               categories:
+ *                 type: string
+ *                 description: "Array de IDs de categorias em formato JSON string. Exemplo: '[\"e6e1e1c2-1a2b-4c3d-8e4f-1a2b3c4d5e01\",\"b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04\"]'"
+ *                 example: '["e6e1e1c2-1a2b-4c3d-8e4f-1a2b3c4d5e01","b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04"]'
+ *               photo:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                   format: binary
+ *                 description: "Imagens do produto (até 10 arquivos)"
+ *     responses:
+ *       201:
+ *         description: Produto criado com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id: { type: string }
+ *                 name: { type: string }
+ *                 description: { type: string }
+ *                 active: { type: boolean }
+ *                 product_type_id: { type: string }
+ *                 supplier_id: { type: string }
+ *                 created_at: { type: string, format: date-time }
+ *                 created_by: { type: string }
+ *                 updated_at: { type: string, format: date-time, nullable: true }
+ *                 updated_by: { type: string, nullable: true }
+ *                 inactivated_at: { type: string, format: date-time, nullable: true }
+ *                 variants:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                 images:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                 categories:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *       400:
+ *         description: Dados inválidos
+ *       409:
+ *         description: Produto já existe
+ *
+ *     x-formData-tip: |
+ *       Para enviar imagens junto com os dados do produto, use o formato **form-data** no Postman ou na sua ferramenta de API.
+ *       - Campos simples (name, description, etc): tipo **Text**
+ *       - Campos complexos (variants, categories): envie como **string JSON**
+ *       - Imagens: campo **photo** (tipo File, pode enviar múltiplos arquivos)
+ */
 productsRoutes.post('/', upload.array('photo', 10), createProductController)
 
 export { productsRoutes }

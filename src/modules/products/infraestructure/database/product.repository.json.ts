@@ -41,4 +41,10 @@ export class ProductRepositoryJson implements ProductsRepository {
     await fs.writeFile(this.filePath, JSON.stringify(products, null, 2))
     return product
   }
+
+  async findAll(): Promise<ProductModel[]> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const products: ProductModel[] = JSON.parse(data)
+    return products
+  }
 }

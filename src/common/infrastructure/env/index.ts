@@ -13,6 +13,10 @@ const envSchema = z.object({
   CLOUDFLARE_R2_SECRET_ACCESS_KEY: z.string(),
   CLOUDFLARE_R2_BUCKET_NAME: z.string(),
   CLOUDFLARE_R2_DEV_SUBDOMAIN: z.string(),
+  REDIS_HOST: z.string(),
+  REDIS_PORT: z.coerce.number(),
+  REDIS_PASSWORD: z.string().optional(),
+
 })
 
 const _env = envSchema.safeParse(process.env)
