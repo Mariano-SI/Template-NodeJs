@@ -223,6 +223,61 @@ productsRoutes.get('/:id', showProductDetailsController)
  *       - Imagens: campo **photo** (tipo File, pode enviar múltiplos arquivos)
  */
 productsRoutes.post('/', upload.array('photo', 10), createProductController)
+/**
+ * @swagger
+ * /products/{id}/reviews:
+ *   post:
+ *     summary: Cria um review para um produto
+ *     tags: [Products]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID do produto
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               rating:
+ *                 type: integer
+ *                 example: 5
+ *               description:
+ *                 type: string
+ *                 example: "Ótimo produto!"
+ *               photo:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                   format: binary
+ *                 description: "Imagens do review (até 10 arquivos)"
+ *     responses:
+ *       201:
+ *         description: Review criado com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 id: { type: string }
+ *                 product_id: { type: string }
+ *                 rating: { type: integer }
+ *                 description: { type: string }
+ *                 created_at: { type: string, format: date-time }
+ *                 created_by: { type: string }
+ *                 images:
+ *                   type: array
+ *                   items:
+ *                     type: string
+ *       400:
+ *         description: Dados inválidos
+ *       404:
+ *         description: Produto não encontrado
+ */
 productsRoutes.post(
   '/:id/reviews',
   upload.array('photo', 10),
