@@ -3,7 +3,7 @@ import { ProductVariantsRepository } from '../../domain/repositories/product-var
 import { ProductImagesRepository } from '../../domain/repositories/product-images.repository'
 import { SuppliersRepository } from '@/modules/suppliers/domain/repositories/supplier.repository'
 import { ProductCategorizationRepository } from '../../domain/repositories/product-categorization.repository'
-import { CategoryRepository } from '../../domain/repositories/product-category-repository'
+import { ProductCategoryRepository } from '../../domain/repositories/product-category-repository'
 import { SupplierModel } from '@/modules/suppliers/domain/models/supplier.model'
 import { BadRequestError } from '@/common/domain/errors/bad-request-error'
 import { UploaderProvider } from '@/common/domain/providers/uploader.provider'
@@ -31,7 +31,7 @@ export default class CreateProductUseCase {
     private readonly productImagesRepository: ProductImagesRepository,
     private readonly suppliersRepository: SuppliersRepository,
     private readonly productCategorizationRepository: ProductCategorizationRepository,
-    private readonly categoryRepository: CategoryRepository,
+    private readonly categoryRepository: ProductCategoryRepository,
     private readonly imageUploader: UploaderProvider,
     private readonly cacheProvider: CacheProvider,
   ) {}

@@ -5,7 +5,7 @@ import { ProductVariantsRepository } from '../../domain/repositories/product-var
 import { ProductImagesRepository } from '../../domain/repositories/product-images.repository'
 import { SuppliersRepository } from '@/modules/suppliers/domain/repositories/supplier.repository'
 import { ProductCategorizationRepository } from '../../domain/repositories/product-categorization.repository'
-import { CategoryRepository } from '../../domain/repositories/product-category-repository'
+import { ProductCategoryRepository } from '../../domain/repositories/product-category-repository'
 
 type Input = {
   id: string
@@ -20,7 +20,7 @@ export default class ShowProductDetailsUseCase {
     private readonly imagesRepository: ProductImagesRepository,
     private readonly suppliersRepository: SuppliersRepository,
     private readonly productCategorizationRepository: ProductCategorizationRepository,
-    private readonly categoryRepository: CategoryRepository,
+    private readonly categoryRepository: ProductCategoryRepository,
   ) {}
   async execute(input: Input): Promise<Output> {
     const { id, includeInactive } = input
