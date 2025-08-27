@@ -121,5 +121,21 @@
     "active": true,
     "created_at": "2025-08-27T21:03:41.499Z",
     "created_by": "system"
+  },
+  {
+    "id": "c2163d28-edad-429b-bde9-e324b3709feb",
+    "name": "Supplier Test 1756333994266",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T22:33:14.279Z",
+    "created_by": "system"
+  },
+  {
+    "id": "f68d0fad-5606-4bb7-b473-c1c9b5b073ee",
+    "name": "Supplier Test 1756333994300",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T22:33:14.348Z",
+    "created_by": "system"
   }
 ]
