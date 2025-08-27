@@ -1,4 +1,4 @@
-import { ProductCategorizationInMemoryRepository } from '../unit/mocks/product-categorization.repository.in-memory'
+import { ProductCategorizationInMemoryRepository } from '../mocks/product-categorization.repository.in-memory'
 import { ProductCategorizationModel } from '@/modules/products/domain/models/product.categorization.model'
 
 describe('ProductCategorizationInMemoryRepository unit tests', () => {

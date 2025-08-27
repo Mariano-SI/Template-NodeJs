@@ -1,4 +1,4 @@
-import { ProductCategoryInMemoryRepository } from '../unit/mocks/product-category.repository.in-memory'
+import { ProductCategoryInMemoryRepository } from '../mocks/product-category.repository.in-memory'
 import { ProductCategoryModel } from '@/modules/products/domain/models/product.category.model'
 
 describe('ProductCategoryInMemoryRepository unit tests', () => {

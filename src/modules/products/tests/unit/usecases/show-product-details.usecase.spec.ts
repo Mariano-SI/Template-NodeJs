@@ -2,7 +2,7 @@ import ShowProductDetailsUseCase from '@/modules/products/application/usecases/s
 import { ProductsInMemoryRepository } from '../mocks/product.repository.in-memory'
 import { ProductVariantsInMemoryRepository } from '../mocks/product-variants.repository.in-memory'
 import { ProductImagesInMemoryRepository } from '../mocks/product-images.repository.in-memory'
-import { SuppliersInMemoryRepository } from '@/modules/suppliers/tests/mocks/supplier.repository.in-memory'
+import { SuppliersInMemoryRepository } from '@/modules/suppliers/tests/unit/mocks/supplier.repository.in-memory'
 import { ProductCategorizationInMemoryRepository } from '../mocks/product-categorization.repository.in-memory'
 import { ProductCategoryInMemoryRepository } from '../mocks/product-category.repository.in-memory'
 import { ProductModel } from '@/modules/products/domain/models/product.model'
