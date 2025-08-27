@@ -73,5 +73,53 @@
     "active": true,
     "created_at": "2025-08-27T17:01:16.070Z",
     "created_by": "system"
+  },
+  {
+    "id": "eea3f200-2eb8-478d-995a-c2eb2f386ed1",
+    "name": "Supplier Test 1756327824216",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T20:50:24.228Z",
+    "created_by": "system"
+  },
+  {
+    "id": "296d15db-ac1c-4645-82a1-76c27281ad44",
+    "name": "Supplier Test 1756327824240",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T20:50:24.252Z",
+    "created_by": "system"
+  },
+  {
+    "id": "e51c4af1-6e93-4480-afc7-c3c24dfe2b1a",
+    "name": "Supplier Test 1756328570713",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T21:02:50.723Z",
+    "created_by": "system"
+  },
+  {
+    "id": "0f09161d-4fe5-472e-aed3-0dc60824cf83",
+    "name": "Supplier Test 1756328570733",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T21:02:50.745Z",
+    "created_by": "system"
+  },
+  {
+    "id": "527cafb2-ef32-46ab-9a44-ae201c137e6a",
+    "name": "Supplier Test 1756328621472",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T21:03:41.482Z",
+    "created_by": "system"
+  },
+  {
+    "id": "03cb7961-88b9-4ff1-9ce6-be151d99e1b9",
+    "name": "Supplier Test 1756328621488",
+    "description": "description for integration test",
+    "active": true,
+    "created_at": "2025-08-27T21:03:41.499Z",
+    "created_by": "system"
   }
 ]

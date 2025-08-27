@@ -13,12 +13,12 @@ import { ProductVariantModel } from '../../domain/models/product.variant.model'
 import { ProductCategorizationModel } from '../../domain/models/product.categorization.model'
 import { CacheProvider } from '@/common/domain/providers/cache.provider'
 import { ConflictError } from '@/common/domain/errors/conflict-error'
+import { NotFoundError } from '@/common/domain/errors/not-found-error'
 
 type Input = {
   name: string
   description: string
   active?: boolean
-  product_type_id: string
   supplier_id: string
   variants: any[]
   categories: string[]
@@ -48,8 +48,9 @@ export default class CreateProductUseCase {
 
     const supplier: SupplierModel | null =
       await this.suppliersRepository.findById(input.supplier_id)
+
     if (!supplier) {
-      throw new BadRequestError('Supplier not found')
+      throw new NotFoundError('Supplier not found')
     }
 
     const product = ProductModel.create({
@@ -104,7 +105,7 @@ export default class CreateProductUseCase {
     for (const categoryId of input.categories) {
       const categoryExists = await this.categoryRepository.findById(categoryId)
       if (!categoryExists) {
-        throw new BadRequestError(`Category not found: ${categoryId}`)
+        throw new NotFoundError(`Category not found: ${categoryId}`)
       }
 
       const categorization = ProductCategorizationModel.create({

@@ -7,9 +7,9 @@ import { ProductCategoryInMemoryRepository } from '../mocks/product-category.rep
 import { SuppliersInMemoryRepository } from '@/modules/suppliers/tests/unit/mocks/supplier.repository.in-memory'
 import { SupplierModel } from '@/modules/suppliers/domain/models/supplier.model'
 import { ProductCategoryModel } from '@/modules/products/domain/models/product.category.model'
-import { BadRequestError } from '@/common/domain/errors/bad-request-error'
 import { ConflictError } from '@/common/domain/errors/conflict-error'
 import { CacheProvider } from '@/common/domain/providers/cache.provider'
+import { NotFoundError } from '@/common/domain/errors/not-found-error'
 
 const mockUploader = {
   upload: jest.fn(
@@ -95,7 +95,7 @@ describe('CreateProductUseCase Unit Tests', () => {
       variants: [],
       categories: [category.id],
     }
-    await expect(sut.execute(input)).rejects.toBeInstanceOf(BadRequestError)
+    await expect(sut.execute(input)).rejects.toBeInstanceOf(NotFoundError)
   })
 
   it('should throw error when category not found', async () => {
@@ -107,7 +107,7 @@ describe('CreateProductUseCase Unit Tests', () => {
       variants: [],
       categories: ['invalid-category'],
     }
-    await expect(sut.execute(input)).rejects.toBeInstanceOf(BadRequestError)
+    await expect(sut.execute(input)).rejects.toBeInstanceOf(NotFoundError)
   })
 
   it('should upload images if files are provided', async () => {

@@ -1,12 +1,62 @@
 [
   {
     "id": "catz-1",
-    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04", 
+    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04",
     "product_id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5"
   },
   {
     "id": "catz-2",
-    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05", 
+    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05",
     "product_id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5"
+  },
+  {
+    "id": "abcd071a-fa05-4249-8229-a400ff98cb84",
+    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04",
+    "product_id": "f7155c09-69c6-4cc0-a98d-74674a3ec866"
+  },
+  {
+    "id": "549d36b2-0eca-4a6e-8e3a-a71a42f83992",
+    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05",
+    "product_id": "f7155c09-69c6-4cc0-a98d-74674a3ec866"
+  },
+  {
+    "id": "a3e2a656-819a-47ef-a29a-095fce9f1130",
+    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04",
+    "product_id": "5098abab-7dd8-4918-92ae-16ada630d491"
+  },
+  {
+    "id": "57f36264-8465-45e5-8d23-85629a553af0",
+    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05",
+    "product_id": "5098abab-7dd8-4918-92ae-16ada630d491"
+  },
+  {
+    "id": "a8994391-a8fe-42fd-a95f-c8fbfb043578",
+    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04",
+    "product_id": "cc6c68cb-5493-47f9-b206-419ffe49a638"
+  },
+  {
+    "id": "6e4e349c-60a8-4206-9190-8a18d1629a96",
+    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05",
+    "product_id": "cc6c68cb-5493-47f9-b206-419ffe49a638"
+  },
+  {
+    "id": "4443b6da-39ec-46be-86d5-d107f4ad12fe",
+    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04",
+    "product_id": "a310e48c-4c5c-4d17-887f-917910ba615b"
+  },
+  {
+    "id": "8beb5660-5e7a-47f9-8069-31e29ddcaffd",
+    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05",
+    "product_id": "a310e48c-4c5c-4d17-887f-917910ba615b"
+  },
+  {
+    "id": "136b459f-e20a-49c1-9186-b4b00d1045d4",
+    "product_category_id": "b9b4b4f5-4d5e-7f8a-1b2c-4d5e6f7a8b04",
+    "product_id": "5363587e-ed47-4d2a-8af5-6b04ad2c22ba"
+  },
+  {
+    "id": "1cd2f32d-496b-4119-b5ea-7252df05baac",
+    "product_category_id": "c0c5c5a6-5e6f-8a9b-2c3d-5e6f7a8b9c05",
+    "product_id": "5363587e-ed47-4d2a-8af5-6b04ad2c22ba"
   }
 ]

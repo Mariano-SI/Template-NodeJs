@@ -1,15 +1,15 @@
 [
   {
-  "id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5",
-  "name": "INTEGRATION TEST DEFAULT PRODUCT",
-  "description": "Smartphone com tela AMOLED, 128GB, câmera tripla.",
-  "active": true,
-  "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
-  "created_at": "2024-01-10T10:00:00Z",
-  "created_by": "admin",
-  "updated_at": "2024-06-01T12:00:00Z",
-  "updated_by": "admin",
-  "inactivated_at": null
+    "id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5",
+    "name": "INTEGRATION TEST DEFAULT PRODUCT",
+    "description": "Smartphone com tela AMOLED, 128GB, câmera tripla.",
+    "active": true,
+    "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
+    "created_at": "2024-01-10T10:00:00Z",
+    "created_by": "admin",
+    "updated_at": "2024-06-01T12:00:00Z",
+    "updated_by": "admin",
+    "inactivated_at": null
   },
   {
     "id": "1224900d-3d82-456f-9870-f90b40d47519",
@@ -20,6 +20,66 @@
     "created_by": "admin",
     "updated_at": "2024-06-01T12:00:00Z",
     "updated_by": "admin",
+    "inactivated_at": null
+  },
+  {
+    "id": "f7155c09-69c6-4cc0-a98d-74674a3ec866",
+    "name": "INTEGRATION TEST PRODUCT 1756327655226",
+    "description": "Produto criado via teste de integração",
+    "active": true,
+    "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
+    "created_at": "2025-08-27T20:47:35.268Z",
+    "created_by": "system",
+    "updated_at": null,
+    "updated_by": null,
+    "inactivated_at": null
+  },
+  {
+    "id": "5098abab-7dd8-4918-92ae-16ada630d491",
+    "name": "INTEGRATION TEST PRODUCT 1756327825446",
+    "description": "Produto criado via teste de integração",
+    "active": true,
+    "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
+    "created_at": "2025-08-27T20:50:25.463Z",
+    "created_by": "system",
+    "updated_at": null,
+    "updated_by": null,
+    "inactivated_at": null
+  },
+  {
+    "id": "cc6c68cb-5493-47f9-b206-419ffe49a638",
+    "name": "INTEGRATION TEST PRODUCT 1756328416017",
+    "description": "Produto criado via teste de integração",
+    "active": true,
+    "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
+    "created_at": "2025-08-27T21:00:16.060Z",
+    "created_by": "system",
+    "updated_at": null,
+    "updated_by": null,
+    "inactivated_at": null
+  },
+  {
+    "id": "a310e48c-4c5c-4d17-887f-917910ba615b",
+    "name": "INTEGRATION TEST PRODUCT 1756328572661",
+    "description": "Produto criado via teste de integração",
+    "active": true,
+    "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
+    "created_at": "2025-08-27T21:02:52.687Z",
+    "created_by": "system",
+    "updated_at": null,
+    "updated_by": null,
+    "inactivated_at": null
+  },
+  {
+    "id": "5363587e-ed47-4d2a-8af5-6b04ad2c22ba",
+    "name": "INTEGRATION TEST PRODUCT 1756328621789",
+    "description": "Produto criado via teste de integração",
+    "active": true,
+    "supplier_id": "abf792bc-aad9-469c-a392-026252785b9c",
+    "created_at": "2025-08-27T21:03:41.813Z",
+    "created_by": "system",
+    "updated_at": null,
+    "updated_by": null,
     "inactivated_at": null
   }
 ]
