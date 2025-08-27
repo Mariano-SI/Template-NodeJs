@@ -1,16 +1,12 @@
-version: '3.8'
 services:
-  postgres:
-    image: bitnami/postgresql:latest
-    container_name: db_form_eventos
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: always
     environment:
-      - POSTGRESQL_USERNAME=${DB_USER}
-      - POSTGRESQL_PASSWORD=${DB_PASS}
-      - POSTGRESQL_DATABASE=${DB_NAME}
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-docker}
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD:-docker}"]
     ports:
-      - "5432:5432"
+      - "6379:6379"
     volumes:
-      - postgres_data:/bitnami/postgresql
-volumes:
-  postgres_data:
-    driver: local
+      - ./redis-data:/data
