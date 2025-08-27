@@ -59,6 +59,21 @@ const productsRoutes = Router()
  *                       inactivatedAt: { type: string, format: date-time, nullable: true }
  *                       updatedAt: { type: string, format: date-time }
  *                       updatedBy: { type: string }
+ *                 images:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       id: { type: string }
+ *                       productId: { type: string }
+ *                       image: { type: string }
+ *                       main: { type: boolean }
+ *                       active: { type: boolean }
+ *                       createdAt: { type: string, format: date-time }
+ *                       createdBy: { type: string }
+ *                       inactivatedAt: { type: string, format: date-time, nullable: true }
+ *                       updatedAt: { type: string, format: date-time }
+ *                       updatedBy: { type: string }
  *       400:
  *         description: Parâmetros inválidos
  *       404:

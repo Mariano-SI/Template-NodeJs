@@ -3,6 +3,7 @@ import ShowProductDetailsUseCase from '@/modules/products/application/usecases/s
 import { ProductRepositoryJson } from '../../database/products.repository.json'
 import { validateShowProductDetailsRequest } from '../validators/show-product-details.validator'
 import { ProductVariantsRepositoryJson } from '../../database/products-variants.repository.json'
+import { ProductImagesRepositoryJson } from '../../database/products-images.repository.json'
 
 export async function showProductDetailsController(
   request: Request,
@@ -12,9 +13,11 @@ export async function showProductDetailsController(
 
   const productRepository = ProductRepositoryJson.getInstance()
   const productVariantsRepository = ProductVariantsRepositoryJson.getInstance()
+  const productImagesRepository = ProductImagesRepositoryJson.getInstance()
   const showProductDetailsUseCase = new ShowProductDetailsUseCase(
     productRepository,
     productVariantsRepository,
+    productImagesRepository,
   )
 
   const example = await showProductDetailsUseCase.execute({

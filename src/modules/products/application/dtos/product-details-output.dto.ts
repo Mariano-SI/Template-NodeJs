@@ -11,7 +11,7 @@ export class ProductDetailsOutputDto {
   updatedBy?: string
   inactivatedAt?: string | null
   variants?: any[]
-  // images?: any[]
+  images?: any[]
   // supplier?: any
 
   constructor(props: any) {
@@ -27,7 +27,7 @@ export class ProductDetailsOutputDto {
     this.updatedBy = props.updatedBy
     this.inactivatedAt = props.inactivatedAt
     this.variants = props.variants
-    // this.images = props.images
+    this.images = props.images
     // this.supplier = props.supplier
   }
 }
