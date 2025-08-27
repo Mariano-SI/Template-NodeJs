@@ -1,8 +1,10 @@
 import { promises as fs } from 'fs'
 import { ProductCategoryModel } from '../../domain/models/product.category.model'
-import { CategoryRepository } from '../../domain/repositories/product-category-repository'
+import { ProductCategoryRepository } from '../../domain/repositories/product-category-repository'
 
-export class ProductCategoryRepositoryJson implements CategoryRepository {
+export class ProductCategoryRepositoryJson
+  implements ProductCategoryRepository
+{
   private static instance: ProductCategoryRepositoryJson
   private filePath = 'src/common/infrastructure/database/productCategories.json'
 
@@ -14,9 +16,9 @@ export class ProductCategoryRepositoryJson implements CategoryRepository {
     return ProductCategoryRepositoryJson.instance
   }
 
-  async findById(categoryId: string): Promise<ProductCategoryModel[]> {
+  async findById(categoryId: string): Promise<ProductCategoryModel | null> {
     const data = await fs.readFile(this.filePath, 'utf-8')
     const categories: ProductCategoryModel[] = JSON.parse(data)
-    return categories.filter(c => c.id === categoryId)
+    return categories.find(c => c.id === categoryId) ?? null
   }
 }
