@@ -31,5 +31,13 @@
     "updated_at": "2024-06-01T12:00:00Z",
     "updated_by": "admin",
     "inactivated_at": null
+  },
+  {
+    "id": "50faab9d-b692-4cc5-8920-fe51579c6055",
+    "name": "Primeiro supplier criado via endpoint",
+    "description": "Essa é a descrição do primeiro suppliers criado pelo endpoint POST /api/suppliers ao qual utilize de injecao de dependencias, factory method e singleton",
+    "active": true,
+    "created_at": "2025-08-27T02:44:30.446Z",
+    "created_by": "system"
   }
 ]

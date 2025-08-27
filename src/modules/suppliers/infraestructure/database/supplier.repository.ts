@@ -19,4 +19,22 @@ export class SupplierRepositoryJson implements SuppliersRepository {
     const supplier = suppliers.find(s => s.id === id)
     return supplier ? supplier : null
   }
+
+  async create(supplier: SupplierModel): Promise<void> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const suppliers: SupplierModel[] = data ? JSON.parse(data) : []
+    suppliers.push(supplier)
+    await fs.writeFile(
+      this.filePath,
+      JSON.stringify(suppliers, null, 2),
+      'utf-8',
+    )
+  }
+
+  async findByName(name: string): Promise<SupplierModel | null> {
+    const data = await fs.readFile(this.filePath, 'utf-8')
+    const suppliers: SupplierModel[] = JSON.parse(data)
+    const supplier = suppliers.find(s => s.name === name)
+    return supplier ? supplier : null
+  }
 }
