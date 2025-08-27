@@ -33,7 +33,7 @@ export default class ShowProductDetailsUseCase {
     const [variants, images, supplier, productCategories] = await Promise.all([
       this.variantsRepository.findByProductId(product.id),
       this.imagesRepository.findByProductId(product.id),
-      this.suppliersRepository.findById(product.supplierId),
+      this.suppliersRepository.findById(product.supplier_id),
       this.productCategorizationRepository.findByProductId(product.id),
     ])
 

@@ -1,13 +1,12 @@
 export interface ProductVariantModel {
   id: string
-  productId: string
+  product_id: string
   active: boolean
   price: number
   quantity: number
   attributes: Record<string, any>
-  productImageId?: string
-  createdAt: Date
-  inactivatedAt?: Date
-  updatedAt?: Date
-  updatedBy?: string
+  created_at: Date
+  inactivated_at?: Date
+  updated_at?: Date
+  updated_by?: string
 }

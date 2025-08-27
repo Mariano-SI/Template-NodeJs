@@ -3,10 +3,9 @@ export interface ProductImageModel {
   productId: string
   image: string
   main: boolean
-  active: boolean
-  createdAt: Date
-  createdBy: string
-  inactivatedAt?: Date
-  updatedAt?: Date
-  updatedBy?: string
+  created_at: Date
+  created_by: string
+  inactivated_at?: Date
+  updated_at?: Date
+  updated_by?: string
 }

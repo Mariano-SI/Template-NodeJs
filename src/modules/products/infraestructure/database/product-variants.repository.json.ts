@@ -23,7 +23,7 @@ export class ProductVariantsRepositoryJson
     const data = await fs.readFile(this.filePath, 'utf-8')
     const variants: ProductVariantModel[] = JSON.parse(data)
     return variants.filter(v => {
-      if (v.productId !== productId) return false
+      if (v.product_id !== productId) return false
       if (!includeInactive && !v.active) return false
       return true
     })
