@@ -11,6 +11,7 @@ import { ProductModel } from '../../domain/models/product.model'
 import { ProductImageModel } from '../../domain/models/product.image.model'
 import { ProductVariantModel } from '../../domain/models/product.variant.model'
 import { ProductCategorizationModel } from '../../domain/models/product.categorization.model'
+import { CacheProvider } from '@/common/domain/providers/cache.provider'
 
 type Input = {
   name: string
@@ -32,6 +33,7 @@ export default class CreateProductUseCase {
     private readonly productCategorizationRepository: ProductCategorizationRepository,
     private readonly categoryRepository: CategoryRepository,
     private readonly imageUploader: UploaderProvider,
+    private readonly cacheProvider: CacheProvider,
   ) {}
 
   async execute(input: Input): Promise<any> {
@@ -110,6 +112,8 @@ export default class CreateProductUseCase {
       })
       await this.productCategorizationRepository.create(categorization)
     }
+
+    await this.cacheProvider.invalidate('products:all')
 
     return {
       ...product,

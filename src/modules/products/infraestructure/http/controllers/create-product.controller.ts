@@ -11,6 +11,7 @@ import { validateCreateProductRequest } from '../validators/create-product.valid
 import { validateProductVariants } from '../validators/validate-product-variants'
 import { CloudflareR2Uploader } from '@/common/infrastructure/providers/uploader-provider.cloudflareR2'
 import CreateProductUseCase from '@/modules/products/application/usecases/create-product.usecase'
+import { CacheProviderRedis } from '@/common/infrastructure/providers/cache-provider.redis'
 
 export async function createProductController(
   request: Request,
@@ -28,6 +29,8 @@ export async function createProductController(
     ProductCategorizationRepositoryJson.getInstance()
   const categoryRepository = ProductCategoryRepositoryJson.getInstance()
 
+  const redisCacheProvider = new CacheProviderRedis()
+
   const imageUploader = new CloudflareR2Uploader()
 
   const createProductUseCase = new CreateProductUseCase(
@@ -38,6 +41,7 @@ export async function createProductController(
     productCategorizationRepository,
     categoryRepository,
     imageUploader,
+    redisCacheProvider,
   )
   const product = await createProductUseCase.execute({
     ...productData,
