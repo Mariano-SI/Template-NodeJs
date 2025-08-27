@@ -18,7 +18,7 @@ const productsRoutes = Router()
  *           format: uuid
  *         description: UUID do produto
  *       - in: query
- *         name: includeInactive
+ *         name: include_inactive
  *         required: false
  *         schema:
  *           type: string
@@ -36,44 +36,44 @@ const productsRoutes = Router()
  *                 name: { type: string }
  *                 description: { type: string }
  *                 active: { type: boolean }
- *                 productTypeId: { type: string }
- *                 supplierId: { type: string }
- *                 createdAt: { type: string, format: date-time }
- *                 createdBy: { type: string }
- *                 updatedAt: { type: string, format: date-time }
- *                 updatedBy: { type: string }
- *                 inactivatedAt: { type: string, format: date-time, nullable: true }
+ *                 product_type_id: { type: string }
+ *                 supplier_id: { type: string }
+ *                 created_at: { type: string, format: date-time }
+ *                 created_by: { type: string }
+ *                 updated_at: { type: string, format: date-time }
+ *                 updated_by: { type: string }
+ *                 inactivated_at: { type: string, format: date-time, nullable: true }
  *                 variants:
  *                   type: array
  *                   items:
  *                     type: object
  *                     properties:
  *                       id: { type: string }
- *                       productId: { type: string }
+ *                       product_id: { type: string }
  *                       active: { type: boolean }
  *                       price: { type: number }
  *                       quantity: { type: number }
  *                       attributes: { type: string }
- *                       productImageId: { type: string }
- *                       createdAt: { type: string, format: date-time }
- *                       inactivatedAt: { type: string, format: date-time, nullable: true }
- *                       updatedAt: { type: string, format: date-time }
- *                       updatedBy: { type: string }
+ *                       product_image_id: { type: string }
+ *                       created_at: { type: string, format: date-time }
+ *                       inactivated_at: { type: string, format: date-time, nullable: true }
+ *                       updated_at: { type: string, format: date-time }
+ *                       updated_by: { type: string }
  *                 images:
  *                   type: array
  *                   items:
  *                     type: object
  *                     properties:
  *                       id: { type: string }
- *                       productId: { type: string }
+ *                       product_id: { type: string }
  *                       image: { type: string }
  *                       main: { type: boolean }
  *                       active: { type: boolean }
- *                       createdAt: { type: string, format: date-time }
- *                       createdBy: { type: string }
- *                       inactivatedAt: { type: string, format: date-time, nullable: true }
- *                       updatedAt: { type: string, format: date-time }
- *                       updatedBy: { type: string }
+ *                       created_at: { type: string, format: date-time }
+ *                       created_by: { type: string }
+ *                       inactivated_at: { type: string, format: date-time, nullable: true }
+ *                       updated_at: { type: string, format: date-time }
+ *                       updated_by: { type: string }
  *                 supplier:
  *                   type: object
  *                   properties:
@@ -81,11 +81,18 @@ const productsRoutes = Router()
  *                     name: { type: string }
  *                     description: { type: string }
  *                     active: { type: boolean }
- *                     createdAt: { type: string, format: date-time }
- *                     createdBy: { type: string }
- *                     updatedAt: { type: string, format: date-time }
- *                     updatedBy: { type: string }
- *                     inactivatedAt: { type: string, format: date-time, nullable: true }
+ *                     created_at: { type: string, format: date-time }
+ *                     created_by: { type: string }
+ *                     updated_at: { type: string, format: date-time }
+ *                     updated_by: { type: string }
+ *                     inactivated_at: { type: string, format: date-time, nullable: true }
+ *                 categories:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       id: { type: string }
+ *                       name: { type: string }
  *       400:
  *         description: Parâmetros inválidos
  *       404:
