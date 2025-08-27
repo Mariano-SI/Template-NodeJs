@@ -15,7 +15,6 @@ export async function createProductController(
   request: Request,
   response: Response,
 ): Promise<Response> {
-  console.log('files', request.files)
   const productData = validateCreateProductRequest(request)
   validateProductVariants(productData.variants)
 

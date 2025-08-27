@@ -1,0 +1,16 @@
+[
+  {
+    "id": "5401dd26-6d3f-4efe-a860-cf891f635897",
+    "product_review_id": "9fd00640-2181-4ed1-afd8-04e09f4b32aa",
+    "image": "https://pub-d831ba114977488b81fc7e8864c49bc3.r2.dev/c++.jpeg",
+    "created_at": "2025-08-27T21:54:52.805Z",
+    "created_by": "system"
+  },
+  {
+    "id": "709c1c1e-4ce3-40a7-a4ab-b163713c4606",
+    "product_review_id": "9fd00640-2181-4ed1-afd8-04e09f4b32aa",
+    "image": "https://pub-d831ba114977488b81fc7e8864c49bc3.r2.dev/gopherGolang.jpg",
+    "created_at": "2025-08-27T21:54:52.806Z",
+    "created_by": "system"
+  }
+]
