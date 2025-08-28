@@ -1,6 +1,6 @@
 /**
  * @swagger
- * /suppliers:
+ * /api/suppliers:
  *   post:
  *     summary: Cria um novo fornecedor
  *     tags: [Suppliers]

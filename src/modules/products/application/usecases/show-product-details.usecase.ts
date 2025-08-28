@@ -55,7 +55,7 @@ export default class ShowProductDetailsUseCase {
         description: review.description,
         created_at: review.created_at,
         created_by: review.created_by,
-        images, // array de imagens
+        images,
       })
     }
 

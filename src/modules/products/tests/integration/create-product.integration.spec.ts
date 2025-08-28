@@ -91,7 +91,7 @@ describe('POST /api/products', () => {
     expect(typeof response.variants[0].attributes).toBe('string')
 
     expect(Array.isArray(response.images)).toBe(true)
-    expect(response.images.length).toBe(0) // Nenhuma imagem enviada
+    expect(response.images.length).toBe(0)
 
     expect(Array.isArray(response.categories)).toBe(true)
     expect(response.categories).toEqual([
