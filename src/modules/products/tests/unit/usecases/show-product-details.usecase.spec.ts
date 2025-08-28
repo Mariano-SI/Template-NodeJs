@@ -12,6 +12,10 @@ import { ProductCategorizationModel } from '@/modules/products/domain/models/pro
 import { ProductCategoryModel } from '@/modules/products/domain/models/product.category.model'
 import { SupplierModel } from '@/modules/suppliers/domain/models/supplier.model'
 import { NotFoundError } from '@/common/domain/errors/not-found-error'
+import { ProductReviewRepositoryInMemory } from '../mocks/product-review.repository.in-memory'
+import { ProductReviewImageRepositoryInMemory } from '../mocks/product-review-image.repository.in-memory'
+import { ProductReviewModel } from '@/modules/products/domain/models/product.review.model'
+import { ProductReviewImageModel } from '@/modules/products/domain/models/product.review.image.model'
 
 describe('ShowProductDetailsUseCase Unit Tests', () => {
   let sut: ShowProductDetailsUseCase
@@ -21,6 +25,8 @@ describe('ShowProductDetailsUseCase Unit Tests', () => {
   let suppliersRepository: SuppliersInMemoryRepository
   let categorizationRepository: ProductCategorizationInMemoryRepository
   let categoryRepository: ProductCategoryInMemoryRepository
+  let productReviewRepository: ProductReviewRepositoryInMemory
+  let productReviewImageRepository: ProductReviewImageRepositoryInMemory
 
   let product: ProductModel
   let supplier: SupplierModel
@@ -33,6 +39,8 @@ describe('ShowProductDetailsUseCase Unit Tests', () => {
     suppliersRepository = new SuppliersInMemoryRepository()
     categorizationRepository = new ProductCategorizationInMemoryRepository()
     categoryRepository = new ProductCategoryInMemoryRepository()
+    productReviewRepository = new ProductReviewRepositoryInMemory()
+    productReviewImageRepository = new ProductReviewImageRepositoryInMemory()
 
     sut = new ShowProductDetailsUseCase(
       productsRepository,
@@ -41,6 +49,8 @@ describe('ShowProductDetailsUseCase Unit Tests', () => {
       suppliersRepository,
       categorizationRepository,
       categoryRepository,
+      productReviewRepository,
+      productReviewImageRepository,
     )
 
     supplier = SupplierModel.create({ name: 'Supplier 1', description: 'desc' })
@@ -75,9 +85,30 @@ describe('ShowProductDetailsUseCase Unit Tests', () => {
       product_id: product.id,
     })
     await categorizationRepository.create(categorization)
+
+    const review = ProductReviewModel.create({
+      product_id: product.id,
+      rating: 5,
+      description: 'Ótimo produto!',
+    })
+
+    await productReviewRepository.create(review)
+
+    const review2 = ProductReviewModel.create({
+      product_id: product.id,
+      rating: 2,
+      description: 'Ótimo produto!',
+    })
+    await productReviewRepository.create(review2)
+
+    const reviewImage = ProductReviewImageModel.create({
+      product_review_id: review.id,
+      image: 'https://example.com/review-image.jpg',
+    })
+    await productReviewImageRepository.create(reviewImage)
   })
 
-  it('should return product details with variants, images, categories and supplier', async () => {
+  it('should return product details with variants, images, categories, reviews and supplier', async () => {
     const result = await sut.execute({ id: product.id })
     expect(result.id).toBe(product.id)
     expect(result.name).toBe(product.name)
@@ -97,6 +128,16 @@ describe('ShowProductDetailsUseCase Unit Tests', () => {
     expect(result.supplier.id).toBe(supplier.id)
     expect(result.supplier.name).toBe(supplier.name)
     expect(result.supplier.description).toBe(supplier.description)
+
+    expect(result.average_rating).toBe(3.5)
+
+    expect(result.reviews).toHaveLength(2)
+    const reviewWithImage = result.reviews.find(r => r.rating === 5)
+    expect(reviewWithImage.images).toContain(
+      'https://example.com/review-image.jpg',
+    )
+    const reviewWithoutImage = result.reviews.find(r => r.rating === 2)
+    expect(reviewWithoutImage.images).toEqual([])
   })
 
   it('should throw NotFoundError if product does not exist', async () => {

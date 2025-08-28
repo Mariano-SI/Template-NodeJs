@@ -106,5 +106,41 @@
       "storage": "128GB"
     },
     "created_at": "2025-08-27T22:33:19.058Z"
+  },
+  {
+    "id": "18e512d9-0cba-4595-aec0-3fd120713c10",
+    "product_id": "d93398cc-0643-4e7c-aa3e-79cfe43bf549",
+    "active": true,
+    "price": 3999.99,
+    "quantity": 10,
+    "attributes": {
+      "color": "Preto",
+      "storage": "128GB"
+    },
+    "created_at": "2025-08-28T00:00:33.358Z"
+  },
+  {
+    "id": "d20d3889-a57e-46ce-989d-871c65869a0d",
+    "product_id": "142b2870-766c-46aa-b0e8-c035d5b1c202",
+    "active": true,
+    "price": 3999.99,
+    "quantity": 10,
+    "attributes": {
+      "color": "Preto",
+      "storage": "128GB"
+    },
+    "created_at": "2025-08-28T00:09:08.555Z"
+  },
+  {
+    "id": "be415cac-bd6c-4e78-8ed3-11d08b3fa53d",
+    "product_id": "7fd5b4b4-1fb3-48c9-bbcf-f82d630bd8f8",
+    "active": true,
+    "price": 3999.99,
+    "quantity": 10,
+    "attributes": {
+      "color": "Preto",
+      "storage": "128GB"
+    },
+    "created_at": "2025-08-28T00:13:44.293Z"
   }
 ]

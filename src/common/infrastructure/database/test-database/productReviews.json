@@ -30,5 +30,29 @@
     "description": "Ótimo produto!",
     "created_at": "2025-08-27T22:33:19.080Z",
     "created_by": "system"
+  },
+  {
+    "id": "74b96a23-d28e-4582-ad1f-adcf2fdceaf0",
+    "product_id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5",
+    "rating": 5,
+    "description": "Ótimo produto!",
+    "created_at": "2025-08-28T00:00:35.654Z",
+    "created_by": "system"
+  },
+  {
+    "id": "0d56f13b-2c5e-4dc9-9abf-47eac5e4bd44",
+    "product_id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5",
+    "rating": 5,
+    "description": "Ótimo produto!",
+    "created_at": "2025-08-28T00:09:08.013Z",
+    "created_by": "system"
+  },
+  {
+    "id": "6cbe05c5-d37b-48b4-a4df-4d72423e946d",
+    "product_id": "3441a643-ed3d-4c45-bcce-e69139c4d7f5",
+    "rating": 5,
+    "description": "Ótimo produto!",
+    "created_at": "2025-08-28T00:13:44.701Z",
+    "created_by": "system"
   }
 ]

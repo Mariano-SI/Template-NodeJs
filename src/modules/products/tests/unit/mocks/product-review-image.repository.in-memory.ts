@@ -12,4 +12,10 @@ export class ProductReviewImageRepositoryInMemory
     this.items.push(productReviewImage)
     return productReviewImage
   }
+
+  async getImageUrlByReviewId(reviewId: string): Promise<string[]> {
+    return this.items
+      .filter(item => item.product_review_id === reviewId)
+      .map(item => item.image)
+  }
 }
